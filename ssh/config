@@ -1,0 +1,20 @@
+
+# --- SourceTree Generated ---
+Host JohannesMerz-GitHub
+	HostName github.com
+	User JohannesMerz
+	PreferredAuthentications publickey
+	IdentityFile /Users/johannesmerz/.ssh/JohannesMerz-GitHub
+	UseKeychain yes
+	AddKeysToAgent yes
+# ----------------------------
+
+# --- Sourcetree Generated ---
+Host JohannesMerz-Bitbucket
+	HostName bitbucket.org
+	User JohannesMerz
+	PreferredAuthentications publickey
+	IdentityFile /Users/johannesmerz/.ssh/JohannesMerz-Bitbucket
+	UseKeychain yes
+	AddKeysToAgent yes
+# ----------------------------

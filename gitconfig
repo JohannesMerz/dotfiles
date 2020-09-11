@@ -1,0 +1,24 @@
+[alias] 
+	merged-branches = !git branch -vv | grep 'origin/.*: gone]' | awk '{print $1}'  
+	cleanup = !git branch -vv | grep 'origin/.*: gone]' | awk '{print $1}' | xargs git branch -D
+[core]
+	excludesfile = /Users/johannesmerz/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[user]
+	name = JohannesMerz
+	email = johannes_merz@gmx.de
+	signingkey = DC401FA6B1BE6AD968A067A1CAB49DE36FA5F434
+[gpg]
+	program = /usr/local/bin/gpg
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[commit]
+	template = /Users/johannesmerz/.stCommitMsg
